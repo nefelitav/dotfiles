@@ -1,0 +1,38 @@
+[include]
+	path = ~/.gitconfig.local
+[credential]
+    helper = manager
+[core]
+	editor = nano --wait
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
+[alias]
+	first = log --reverse
+	last = log -1 HEAD
+	undo = reset --soft HEAD~1
+	st = status
+	a = add
+	c = commit
+	ac = "git add . && git commit"
+	cl = clone 
+	ch = checkout
+	br = branch
+	di = diff
+	f = fetch
+	lo = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
