@@ -1,7 +1,3 @@
-[include]
-	path = ~/.gitconfig.local
-[credential]
-    helper = manager
 [core]
 	editor = nano --wait
 [fetch]
@@ -13,9 +9,8 @@
 	last = log -1 HEAD
 	undo = reset --soft HEAD~1
 	st = status
-	a = add
+	a = add .
 	c = commit
-	ac = "git add . && git commit"
 	cl = clone 
 	ch = checkout
 	br = branch
