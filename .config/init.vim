@@ -24,6 +24,8 @@ Plug 'https://github.com/mg979/vim-visual-multi'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'https://github.com/machakann/vim-sandwich'
 Plug 'https://github.com/wadackel/vim-dogrun'
+Plug 'https://github.com/neoclide/coc.nvim'
+Plug 'https://github.com/junegunn/fzf.vim'
 
 call plug#end()
 
