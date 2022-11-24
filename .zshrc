@@ -15,17 +15,22 @@ plugins=(git
         zsh-autosuggestions 
         zsh-syntax-highlighting 
         docker 
+        docker-compose
         kubectl 
         node 
+        npm
+        yarn
         golang 
+        rust
         postgres 
+        pip
         sudo # press esc twice to add sudo
         web-search # google from terminal
         copyfile # copy file content to clipboard
         copybuffer # copy from command line using ctrl+O
         dirhistory # alt left, alt right, move in directories
         jsontools # curl ... | pp_json (pretty)
-        npm
+        colored-man-pages
         ) 
 
 source $ZSH/oh-my-zsh.sh
@@ -74,3 +79,5 @@ alias gd='git diff'
 alias gp='f() { git add .;git commit -m $1;git push origin -u $(git rev-parse --abbrev-ref HEAD) };f'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+neofetch
