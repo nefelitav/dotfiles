@@ -4,20 +4,43 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="awesomepanda"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting kubectl)
+# Ctrl + U – delete from the cursor to the start of the line.
+# Ctrl + K – delete from the cursor to the end of the line.
+# Ctrl + W – delete from the cursor to the start of the preceding word.
+# Alt + D – delete from the cursor to the end of the next word.
+
+plugins=(git 
+        zsh-autosuggestions 
+        zsh-syntax-highlighting 
+        docker 
+        kubectl 
+        node 
+        golang 
+        postgres 
+        sudo # press esc twice to add sudo
+        web-search # google from terminal
+        copyfile # copy file content to clipboard
+        copybuffer # copy from command line using ctrl+O
+        dirhistory # alt left, alt right, move in directories
+        jsontools # curl ... | pp_json (pretty)
+        npm
+        ) 
 
 source $ZSH/oh-my-zsh.sh
 
 alias c='clear'
 alias h='history'
+alias hs='history | grep'
 alias mkdir='mkdir -p -v'
 alias q='exit'
 alias ll='ls -lahtr'
 alias home='cd ~'
 alias root='cd /'
-alias python='python3'
+
+alias p='python3'
+alias startpost='sudo service postgresql start;psql -U postgres'
 
 alias d='docker'
 alias dim='docker images'
@@ -26,6 +49,7 @@ alias dpsa="docker ps -a"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 alias drm="docker rm $(docker ps -a -q)"
+alias dex='f() { docker exec -it $1 mysql -u root -p };f'
 
 alias k='kubectl'
 alias nodes='kubectl get nodes -owide'
@@ -42,11 +66,11 @@ alias arpa='cd /mnt/c/Users/ntavoula/Desktop/arpa/cdp; code .'
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
+alias gcl='git clone'
 alias gac='git add .;git commit -m'
 alias gl='git log --oneline'
 alias gb='git checkout -b'
 alias gd='git diff'
-alias gp='f() { git add .; git commit -m $1;git push origin -u $(git rev-parse --abbrev-ref HEAD) };f'
-
+alias gp='f() { git add .;git commit -m $1;git push origin -u $(git rev-parse --abbrev-ref HEAD) };f'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
