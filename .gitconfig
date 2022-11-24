@@ -2,20 +2,6 @@
 	prune = true
 [init]
 	defaultBranch = main
-[alias]
-	first = log --reverse
-	last = log -1 HEAD
-	undo = reset --soft HEAD~1
-	st = status
-	a = add .
-	co = commit -m 
-	cl = clone 
-	ch = checkout
-	br = branch
-	di = diff
-	f = fetch
-	lo = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	p = push origin -u $(git rev-parse --abbrev-ref HEAD)
 [color "branch"]
 	current = yellow bold
 	local = green bold
