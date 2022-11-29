@@ -82,8 +82,12 @@ _G.packer_plugins = {
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim",
-    wants = { "nvim-web-devicons" }
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -119,26 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/vim-polyglot",
-    url = "https://github.com/sheerun/vim-polyglot"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-visual-multi"] = {
-    loaded = true,
-    path = "/home/nefeli/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
-    url = "https://github.com/mg979/vim-visual-multi"
   },
   ["vim-which-key"] = {
     loaded = true,
