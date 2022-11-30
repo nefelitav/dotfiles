@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'jiangmiao/auto-pairs' -- insert () in pairs
   use 'hrsh7th/nvim-cmp' -- autocomplete
-
   use 'liuchengxu/vim-which-key' -- shows keybindings
   use 'nvim-treesitter/nvim-treesitter'
   use {                   
@@ -14,11 +13,6 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons',
     }
   }
-  use {'romgrk/barbar.nvim', 
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-    }
-  } -- tabs
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -31,4 +25,4 @@ end)
 -- autocomplete
 -- search
 -- file explorer
--- bars
+-- tabs
