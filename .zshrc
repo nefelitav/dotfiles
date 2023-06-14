@@ -11,9 +11,7 @@ ZSH_THEME="awesomepanda"
 # Ctrl + W – delete from the cursor to the start of the preceding word.
 # Alt + D – delete from the cursor to the end of the next word.
 
-plugins=(git 
-        zsh-autosuggestions 
-        zsh-syntax-highlighting 
+plugins=(git # command completion, prompt customization, shortcuts, git status, branch
         docker 
         docker-compose
         kubectl 
@@ -23,14 +21,16 @@ plugins=(git
         golang 
         rust
         postgres 
-        pip
+        jsontools # curl ... | pp_json (pretty), jq
+        zsh-autosuggestions  # suggestions
+        zsh-syntax-highlighting # highlighting
+        # pip
+        # web-search # google from terminal
+        # colored-man-pages
         sudo # press esc twice to add sudo
-        web-search # google from terminal
         copyfile # copy file content to clipboard
-        copybuffer # copy from command line using ctrl+O
-        dirhistory # alt left, alt right, move in directories
-        jsontools # curl ... | pp_json (pretty)
-        colored-man-pages
+        copybuffer # copy from command line using ctrl + o
+        dirhistory # dirs, ALT + left, ALT + right, move in directories
         ) 
 
 source $ZSH/oh-my-zsh.sh
@@ -81,3 +81,16 @@ alias gp='f() { git add .;git commit -m $1;git push origin -u $(git rev-parse --
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 neofetch
+
+
+
+# Move in CLI
+# CTRL + A -> start of line
+# CTRL + E -> end of line
+# CTRL + W -> Delete word before cursor
+# ALT + D -> Delete word after cursor
+
+# ESC twice -> sudo 
+# copyfile <filename> ->  copy file content to clipboard
+# CTRL + o -> copy from command line 
+# dirs, ALT + left, ALT + right -> move in directories
