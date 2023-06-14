@@ -20,9 +20,20 @@ return require('packer').startup(function(use)
 
 end)
 
--- comment out text
+-- select text -> :v 
+  -- delete -> x
+  -- copy, paste -> y, p
+  -- comment -> :s/^/#
+  -- uncomment -> :s/^/#
+  
 -- multi cursor
 -- autocomplete
 -- search
 -- file explorer
 -- tabs
+  -- :tabnew filename
+  -- :tabclose filename
+  -- :tabprevious
+  -- :tabnext
+  -- nnoremap <C-Left> :tabprevious<CR>                                                                            
+  -- nnoremap <C-Right> :tabnext<CR>
